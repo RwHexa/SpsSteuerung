@@ -61,6 +61,7 @@ Das folgende Abbild zeigt den erfolgreichen Debug-Betrieb des erstellten Program
 * **Modbus TCP/RTU:** Industrielle Kommunikationsprotokolle müssen für diesen autarken Direktbetrieb nicht aktiviert werden. Sie werden erst notwendig, sobald der ESP32 Daten mit externen HMI-Bildschirmen, SCADA-Systemen oder Node-RED austauschen soll.
 * **Zeitfunktionen:** Als nächste Ausbaustufe ist die Integration von Timern (`TON` / `TOF`) vorbereitet, um Zeitverzögerungen oder Blinkzeichen zu realisieren.
 * **werde einsetzen für umfangreichere logische Schaltungen auf Controller(ESP32)**
-
+  
+![OpenPLC v4.2.9 Debugger Status](ESP32Pin.jpg)
 
 ![OpenPLC v4.2.9 Debugger Status](logorw96.png)
