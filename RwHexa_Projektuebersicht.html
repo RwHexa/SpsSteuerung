@@ -1,0 +1,162 @@
+<meta charset="utf-8">
+<title>Projektübersicht — GitHub RwHexa</title>
+<style>
+  :root{
+    --ink:#1c2530; --muted:#5b6773; --line:#e2e6ea; --bg:#ffffff;
+    --elektronik:#c2410c; --smarthome:#0e7490; --fussball:#15803d;
+    --eisdiele:#b45309; --cad:#6d28d9; --delphi:#1d4ed8; --git:#64748b;
+  }
+  *{box-sizing:border-box}
+  @page{ size:A4; margin:15mm 14mm; }
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Segoe UI",Arial,sans-serif; color:var(--ink);
+    font-size:10.3px; line-height:1.45; background:var(--bg); -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  header.doc{
+    border-bottom:3px solid var(--ink); padding-bottom:10px; margin-bottom:14px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  header.doc .htext{ flex:1; }
+  header.doc .logo{ width:74px; height:74px; flex:none; }
+  header.doc h1{ font-size:22px; margin:0 0 3px; letter-spacing:.2px; }
+  header.doc .sub{ color:var(--muted); font-size:11px; }
+  header.doc .meta{ margin-top:8px; font-size:10.5px; color:var(--ink); }
+  header.doc .meta b{ color:#000; }
+
+  .stats{ display:flex; gap:8px; margin:12px 0 16px; flex-wrap:wrap; }
+  .chip{
+    border:1px solid var(--line); border-radius:8px; padding:7px 11px; background:#f8fafc;
+    min-width:78px;
+  }
+  .chip .n{ font-size:17px; font-weight:700; display:block; line-height:1.1; }
+  .chip .l{ font-size:9px; color:var(--muted); text-transform:uppercase; letter-spacing:.4px; }
+
+  section.cat{ break-inside:avoid; margin-bottom:13px; }
+  h2.cat{
+    font-size:12.5px; margin:0 0 6px; padding:5px 10px; border-radius:6px 6px 0 0;
+    color:#fff; display:flex; justify-content:space-between; align-items:center;
+  }
+  h2.cat .cnt{ font-size:9.5px; font-weight:600; opacity:.9; background:rgba(255,255,255,.22); padding:1px 7px; border-radius:20px; }
+  .c-elektronik{background:var(--elektronik)} .c-smarthome{background:var(--smarthome)}
+  .c-fussball{background:var(--fussball)} .c-eisdiele{background:var(--eisdiele)}
+  .c-cad{background:var(--cad)} .c-delphi{background:var(--delphi)} .c-git{background:var(--git)}
+
+  table{ width:100%; border-collapse:collapse; }
+  th,td{ text-align:left; padding:4px 8px; vertical-align:top; border-bottom:1px solid var(--line); }
+  th{ font-size:8.6px; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); background:#f8fafc; }
+  td.repo{ white-space:nowrap; font-weight:600; }
+  td.zeit{ white-space:nowrap; color:var(--muted); }
+  .lang{ display:inline-block; font-size:8px; font-weight:600; color:#334155; background:#eef2f6;
+         border:1px solid #dbe2e8; border-radius:4px; padding:0 5px; margin-left:5px; vertical-align:1px; }
+  .lock{ color:#94a3b8; font-size:9px; margin-left:4px; }
+  tr:last-child td{ border-bottom:none; }
+
+  footer.doc{ margin-top:14px; padding-top:8px; border-top:1px solid var(--line);
+    font-size:9px; color:var(--muted); display:flex; justify-content:space-between; }
+</style>
+
+<header class="doc">
+  <div class="htext">
+    <h1>Projektübersicht — GitHub <span style="color:#0969da">RwHexa</span></h1>
+    <div class="sub">Reinhard Wermeling (RwTec) · erstellt mit Claude Code</div>
+    <div class="meta"><b>33 Repositories</b> · Zeitraum <b>Januar 2025 – Juli 2026</b> · 7 Themenfelder · Stand 26. Juli 2026</div>
+  </div>
+  <img class="logo" src="data:image/png;base64,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" alt="RwTec Logo">
+</header>
+
+<div class="stats">
+  <div class="chip"><span class="n">33</span><span class="l">Projekte</span></div>
+  <div class="chip"><span class="n">9</span><span class="l">SmartHome/IoT</span></div>
+  <div class="chip"><span class="n">5</span><span class="l">Fußball</span></div>
+  <div class="chip"><span class="n">5</span><span class="l">Elektronik</span></div>
+  <div class="chip"><span class="n">4</span><span class="l">Delphi/TMS</span></div>
+  <div class="chip"><span class="n">10</span><span class="l">privat 🔒</span></div>
+</div>
+
+<section class="cat">
+  <h2 class="cat c-elektronik">🔌 Elektronik &amp; Schaltungstechnik <span class="cnt">5 Projekte</span></h2>
+  <table>
+    <tr><th style="width:22%">Projekt</th><th style="width:16%">Zeitraum</th><th>Kurzbeschreibung</th></tr>
+    <tr><td class="repo">SpsSteuerung</td><td class="zeit">Jul 2026</td><td>SPS-Programmierung mit <b>OpenPLC&nbsp;V4.2.9</b> auf <b>ESP32&nbsp;WROOM</b>: Kontaktplan (KOP), E/A-Pin-Mapping (%IX/%QX → GPIO), Runtime direkt als Firmware geflasht (ohne Windows-Runtime), Live-Debugging. Dokumentierte Inbetriebnahme; Ausbau mit Timern (TON/TOF) und Modbus geplant.</td></tr>
+    <tr><td class="repo">NetzgeraetRw <span class="lang">HTML</span></td><td class="zeit">Jul 2026</td><td>12-V-Sperrwandler (Flyback) mit PWM-Controller OB2263 — Lehr-/Werkstattbericht: Schaltung verstehen, sicher prüfen (Messungen), simulieren (Falstad + HTML), KiCad-Platine.</td></tr>
+    <tr><td class="repo">GeminiNetz <span class="lang">TypeScript</span><span class="lock">🔒</span></td><td class="zeit">Jul 2026</td><td>Schaltnetzteil — begleitendes Arbeits-/Entwurfsrepository.</td></tr>
+    <tr><td class="repo">nf_verstaerker</td><td class="zeit">Jun 2026</td><td>NF-Verstärker: Aufbau und Dokumentation einer Niederfrequenz-Verstärkerschaltung.</td></tr>
+    <tr><td class="repo">motordrehzahl</td><td class="zeit">Mai – Jul 2026</td><td>Drehstrom-Motoren elektronisch ansteuern — Drehzahlsteuerung / Frequenzumrichter-Thematik.</td></tr>
+  </table>
+</section>
+
+<section class="cat">
+  <h2 class="cat c-smarthome">🏠 SmartHome, Shelly, MQTT &amp; IoT <span class="cnt">9 Projekte</span></h2>
+  <table>
+    <tr><th style="width:22%">Projekt</th><th style="width:16%">Zeitraum</th><th>Kurzbeschreibung</th></tr>
+    <tr><td class="repo">shelly-waschmaschine-lora-ntfy <span class="lang">JS</span></td><td class="zeit">Jul 2026</td><td>Waschmaschinen-Fertig-Melder: Shelly 1PM Gen3 misst den Strom, meldet das Waschende per LoRa-Add-on an einen Empfänger, der eine Push-Nachricht über ntfy.sh aufs Handy schickt.</td></tr>
+    <tr><td class="repo">shelly-controller <span class="lang">JS</span></td><td class="zeit">Apr 2026</td><td>Shelly-Geräte per MQTT steuern, umgesetzt mit TMS.</td></tr>
+    <tr><td class="repo">shellyweb <span class="lang">JS</span></td><td class="zeit">Apr – Mai 2026</td><td>Shelly-Steuerung als Web-App auf Android.</td></tr>
+    <tr><td class="repo">shwindows <span class="lang">HTML</span></td><td class="zeit">Mai 2026</td><td>SmartHome-Bedienung/Visualisierung unter Windows.</td></tr>
+    <tr><td class="repo">SmartHome-Extern <span class="lang">C++</span><span class="lock">🔒</span></td><td class="zeit">Mär – Apr 2026</td><td>Erforderliche Dateien zum Betrieb des SmartHome unter Windows (externe Komponenten).</td></tr>
+    <tr><td class="repo">MqttDelphi <span class="lang">Pascal</span><span class="lock">🔒</span></td><td class="zeit">Mär 2026</td><td>MQTT-Anbindung mit Lazarus/Delphi.</td></tr>
+    <tr><td class="repo">MqttLazarus</td><td class="zeit">Mär 2026</td><td>MQTT-Verbindung zum Broker mit Delphi/Lazarus-Oberfläche.</td></tr>
+    <tr><td class="repo">ESP32Webserver <span class="lang">JS</span><span class="lock">🔒</span></td><td class="zeit">Mär 2026</td><td>ESP32 als WLAN-Access-Point mit eigenem Webserver (HTML/CSS/JavaScript).</td></tr>
+    <tr><td class="repo">WaschmGit <span class="lang">C++</span></td><td class="zeit">Dez 2025</td><td>Waschmaschinen-Projekt (Mikrocontroller/Elektronik), frühe Fassung.</td></tr>
+  </table>
+</section>
+
+<section class="cat">
+  <h2 class="cat c-fussball">⚽ Fußball-Turnier &amp; Manager <span class="cnt">5 Projekte</span></h2>
+  <table>
+    <tr><th style="width:22%">Projekt</th><th style="width:16%">Zeitraum</th><th>Kurzbeschreibung</th></tr>
+    <tr><td class="repo">FussballTurnier <span class="lang">Pascal</span></td><td class="zeit">Jul 2026</td><td>Turnierverwaltung (Delphi/VCL): 2 Gruppen + KO-Runde mit Beamer-Turnierbaum, Tabelle/Ergebnisse, Aushang als HTML/PDF, Veranstalter-Branding.</td></tr>
+    <tr><td class="repo">FtvcsskiV8 <span class="lang">JS</span></td><td class="zeit">Aug – Sep 2025</td><td>Fußball-Manager im Browser, über einen Server betrieben.</td></tr>
+    <tr><td class="repo">ftverwaltung <span class="lang">Pascal</span></td><td class="zeit">Jul 2025</td><td>Turnierleitung: Ansichten für Tabelle, Ergebnisliste und aktuelles Spiel.</td></tr>
+    <tr><td class="repo">ftmanager <span class="lang">JS</span></td><td class="zeit">Jul 2025</td><td>Fußball-Turnier im Browser — „alles auf einer Card".</td></tr>
+    <tr><td class="repo">soccer <span class="lang">JS</span><span class="lock">🔒</span></td><td class="zeit">Jan 2026</td><td>Fußball-bezogenes Arbeitsrepository (ohne Beschreibung).</td></tr>
+  </table>
+</section>
+
+<section class="cat">
+  <h2 class="cat c-eisdiele">🍦 Eisdiele (Kasse &amp; Abrechnung) <span class="cnt">3 Projekte</span></h2>
+  <table>
+    <tr><th style="width:22%">Projekt</th><th style="width:16%">Zeitraum</th><th>Kurzbeschreibung</th></tr>
+    <tr><td class="repo">eisdiele <span class="lang">Pascal</span></td><td class="zeit">Mai 2026</td><td>Abrechnungs-/Kassenprogramm für eine Eisdiele.</td></tr>
+    <tr><td class="repo">eisdielerw <span class="lang">HTML</span></td><td class="zeit">Mai 2026</td><td>Eisdielen-Anwendung als Browser-Version.</td></tr>
+    <tr><td class="repo">eisdielezw <span class="lang">HTML</span></td><td class="zeit">Mai – Jun 2026</td><td>Eisdiele mit Schwerpunkt Sicherheit/Zugriff (Zwischenstand).</td></tr>
+  </table>
+</section>
+
+<section class="cat">
+  <h2 class="cat c-cad">🛠️ CAD &amp; Konstruktion <span class="cnt">1 Projekt</span></h2>
+  <table>
+    <tr><th style="width:22%">Projekt</th><th style="width:16%">Zeitraum</th><th>Kurzbeschreibung</th></tr>
+    <tr><td class="repo">konstruktionrw</td><td class="zeit">Jun 2026</td><td>Konstruieren mit CAD + Künstlicher Intelligenz, ausgelegt für 3D-Druck / Metalldruck.</td></tr>
+  </table>
+</section>
+
+<section class="cat">
+  <h2 class="cat c-delphi">💻 Delphi-/TMS-Entwicklung &amp; CSS-Layout <span class="cnt">4 Projekte</span></h2>
+  <table>
+    <tr><th style="width:22%">Projekt</th><th style="width:16%">Zeitraum</th><th>Kurzbeschreibung</th></tr>
+    <tr><td class="repo">DelphiSkills <span class="lang">Pascal</span><span class="lock">🔒</span></td><td class="zeit">Jul 2026</td><td>KI-gestützte Delphi-Entwicklung: VCL, TMS Web Core und Android-APK — Werkzeugkette und Vorgehensweise.</td></tr>
+    <tr><td class="repo">SiloVisu <span class="lang">Pascal</span></td><td class="zeit">Dez 2025 – Mär 2026</td><td>Anlagen-Visualisierung (z. B. Silo-/Prozessdarstellung).</td></tr>
+    <tr><td class="repo">navicsscard <span class="lang">JS</span></td><td class="zeit">Jul 2025</td><td>CSS-Layout (Karten/Navigation) für Delphi-Web-Oberflächen.</td></tr>
+    <tr><td class="repo">TmsCss <span class="lang">JS</span></td><td class="zeit">Jul 2025</td><td>Delphi/TMS-Basis-Layout mit CSS.</td></tr>
+  </table>
+</section>
+
+<section class="cat">
+  <h2 class="cat c-git">🗂️ Versionierung &amp; Test-/Lern-Repositories <span class="cnt">6 Projekte</span></h2>
+  <table>
+    <tr><th style="width:22%">Projekt</th><th style="width:16%">Zeitraum</th><th>Kurzbeschreibung</th></tr>
+    <tr><td class="repo">gitrepo <span class="lock">🔒</span></td><td class="zeit">Apr 2026</td><td>Versionskontrolle — Übungs-/Ablage-Repository.</td></tr>
+    <tr><td class="repo">gitrw</td><td class="zeit">Dez 2025</td><td>Git-Test-/Ablage-Repository.</td></tr>
+    <tr><td class="repo">rwversion <span class="lang">HTML</span><span class="lock">🔒</span></td><td class="zeit">Jul 2025</td><td>Versionen verwalten — Werkzeug/Übung.</td></tr>
+    <tr><td class="repo">rwtestrepository <span class="lang">Pascal</span><span class="lock">🔒</span></td><td class="zeit">Jul 2025</td><td>Zu Testzwecken angelegt.</td></tr>
+    <tr><td class="repo">RwTepoTest <span class="lock">🔒</span></td><td class="zeit">Jan 2025</td><td>Erstes Ausprobieren von Repositories.</td></tr>
+    <tr><td class="repo">desktop-tutorial <span class="lock">🔒</span></td><td class="zeit">Jan 2025</td><td>GitHub-Desktop-Tutorial-Repository.</td></tr>
+  </table>
+</section>
+
+<footer class="doc">
+  <span>Projektübersicht · GitHub RwHexa · erstellt mit Claude Code</span>
+  <span>Stand: 26.07.2026</span>
+</footer>
