@@ -1,5 +1,5 @@
 # Dokumentation: Inbetriebnahme und SPS-Programmierung mit OpenPLC V4.2.9 und ESP32
-
+## auf Version 4.3.2 updatet, getestet alles Funktioniert auch Simulation mit Controller
 ## 1. Übersicht & Versionswechsel
 * **Ausgangssituation:** Bei der Nutzung des OpenPLC Editors V4.1 traten massive Verbindungsprobleme (API-Fehler, JWT-Token-Fehlermeldungen und Versionskonflikte) mit der lokalen Windows-Runtime auf.
 * **Lösung:** Migration auf den aktuellen **OpenPLC Editor V4.2.9**. 
